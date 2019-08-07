@@ -8,16 +8,8 @@
 
 import UIKit
 
-protocol Badgeable {
-  var color: UIColor { get set }
-  var badgeSize: CGFloat { get set }
-  var isVisible: Bool {get set}
-}
-
-class AnotherTableViewCell: UITableViewCell, Badgeable {
+class AnotherTableViewCell: UITableViewCell {
   var color: UIColor = UIColor.blue
-  var badgeSize: CGFloat = 25
-  var isVisible: Bool = false
   
   @IBOutlet weak var cellTitle: UILabel!
   
@@ -28,12 +20,6 @@ class AnotherTableViewCell: UITableViewCell, Badgeable {
     }
   }
   
-  override func layoutSubviews() {
-    if isVisible {
-      anchorImage.isHidden  = true
-    }
-  }
-  
   override func awakeFromNib() {
       super.awakeFromNib()
         // Initialization code
@@ -41,6 +27,5 @@ class AnotherTableViewCell: UITableViewCell, Badgeable {
   
   func configure(name: String) {
     cellTitle.text = name
-    isVisible = true
   }
 }

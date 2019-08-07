@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E80B84B522B6F17F00087C0C /* LCSSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B84B422B6F17F00087C0C /* LCSSolver.swift */; };
 		E80C6FD0228A02D90034D08E /* TestEquatableObjCProps.m in Sources */ = {isa = PBXBuildFile; fileRef = E80C6FCF228A02D90034D08E /* TestEquatableObjCProps.m */; };
+		E86C608522FB2EA400DD044E /* ObjectiveCTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E86C608422FB2EA400DD044E /* ObjectiveCTryCatch.m */; };
 		E8E1CB74227243B600765B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CB73227243B600765B84 /* AppDelegate.swift */; };
 		E8E1CB76227243B600765B84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CB75227243B600765B84 /* ViewController.swift */; };
 		E8E1CB79227243B600765B84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E1CB77227243B600765B84 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		E8E1CB9922724CA800765B84 /* AnotherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CB9722724CA800765B84 /* AnotherTableViewCell.swift */; };
 		E8E1CB9A22724CA800765B84 /* AnotherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E1CB9822724CA800765B84 /* AnotherTableViewCell.xib */; };
 		E8E1CB9C2272571600765B84 /* HomeTilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1CB9B2272571600765B84 /* HomeTilesViewModel.swift */; };
+		E8F99D7A22BD6BD700D276AC /* VeniceBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F99D7922BD6BD700D276AC /* VeniceBadge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		E80C6FCD228A02D80034D08E /* TableViewDiffComputation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViewDiffComputation-Bridging-Header.h"; sourceTree = "<group>"; };
 		E80C6FCE228A02D90034D08E /* TestEquatableObjCProps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestEquatableObjCProps.h; sourceTree = "<group>"; };
 		E80C6FCF228A02D90034D08E /* TestEquatableObjCProps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestEquatableObjCProps.m; sourceTree = "<group>"; };
+		E86C608322FB2EA400DD044E /* ObjectiveCTryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTryCatch.h; sourceTree = "<group>"; };
+		E86C608422FB2EA400DD044E /* ObjectiveCTryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTryCatch.m; sourceTree = "<group>"; };
 		E8E1CB70227243B600765B84 /* TableViewDiffComputation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDiffComputation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1CB73227243B600765B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E1CB75227243B600765B84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 		E8E1CB9722724CA800765B84 /* AnotherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTableViewCell.swift; sourceTree = "<group>"; };
 		E8E1CB9822724CA800765B84 /* AnotherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnotherTableViewCell.xib; sourceTree = "<group>"; };
 		E8E1CB9B2272571600765B84 /* HomeTilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTilesViewModel.swift; sourceTree = "<group>"; };
+		E8F99D7922BD6BD700D276AC /* VeniceBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeniceBadge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,9 @@
 				E80C6FCF228A02D90034D08E /* TestEquatableObjCProps.m */,
 				E80C6FCD228A02D80034D08E /* TableViewDiffComputation-Bridging-Header.h */,
 				E80B84B422B6F17F00087C0C /* LCSSolver.swift */,
+				E8F99D7922BD6BD700D276AC /* VeniceBadge.swift */,
+				E86C608322FB2EA400DD044E /* ObjectiveCTryCatch.h */,
+				E86C608422FB2EA400DD044E /* ObjectiveCTryCatch.m */,
 			);
 			path = TableViewDiffComputation;
 			sourceTree = "<group>";
@@ -218,12 +226,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F99D7A22BD6BD700D276AC /* VeniceBadge.swift in Sources */,
 				E80C6FD0228A02D90034D08E /* TestEquatableObjCProps.m in Sources */,
 				E8E1CB76227243B600765B84 /* ViewController.swift in Sources */,
 				E8E1CB9C2272571600765B84 /* HomeTilesViewModel.swift in Sources */,
 				E8E1CB9922724CA800765B84 /* AnotherTableViewCell.swift in Sources */,
 				E80B84B522B6F17F00087C0C /* LCSSolver.swift in Sources */,
 				E8E1CB74227243B600765B84 /* AppDelegate.swift in Sources */,
+				E86C608522FB2EA400DD044E /* ObjectiveCTryCatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

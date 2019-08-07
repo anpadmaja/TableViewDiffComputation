@@ -45,7 +45,10 @@ class HomeTilesViewModel<T: Equatable> {
         }
       }
     }
-      
+    
+//    guard es.count <= data.count else {
+//      throw NSException(name: NSExceptionName.internalInconsistencyException, reason: "Incorrect number of updates, deletes and inserts", userInfo: nil) as! Error
+//    }
     self.data = data
     delegate?.updateTiles(events: es)
   }

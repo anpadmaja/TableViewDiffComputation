@@ -28,7 +28,13 @@ class ViewController: UITableViewController, HomeTilesDelegate {
   var data3 = ["kiwi", "mango", "apple", "banana", "avocado", "orange", "dates", "lemon"]
   
   private var viewModel: HomeTilesViewModel<String>?
-  private let refreshControlAnother = UIRefreshControl()
+  
+  fileprivate lazy var refreshControlAnother: UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(handleRefresh), for: UIControl.Event.valueChanged)
+    refreshControl.tintColor = UIColor.black
+    return refreshControl
+  }()
   
   @objc private func handleRefresh() {
     if flag {
@@ -43,10 +49,6 @@ class ViewController: UITableViewController, HomeTilesDelegate {
     super.viewDidLoad()
     tableView.register(UINib(nibName: "AnotherTableViewCell", bundle: .main), forCellReuseIdentifier: "AnotherTableViewCell")
     tableView.refreshControl = refreshControlAnother
-    tableView.refreshControl?.addTarget(self, action:
-      #selector(self.handleRefresh),
-                             for: UIControl.Event.valueChanged)
-    tableView.refreshControl?.tintColor = UIColor.black.withAlphaComponent(0.56)
 
     viewModel = HomeTilesViewModel<String>(data: data1)
     viewModel?.delegate = self

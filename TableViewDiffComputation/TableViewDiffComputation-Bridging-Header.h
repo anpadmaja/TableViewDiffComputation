@@ -3,3 +3,4 @@
 //
 
 #import "TestEquatableObjCProps.h"
+#import "ObjectiveCTryCatch.h"
