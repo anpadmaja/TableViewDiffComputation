@@ -8,16 +8,34 @@
 
 #import "ObjectiveCTryCatch.h"
 
+#import "ObjectiveCTryCatch.h"
+
 @implementation ObjectiveCTryCatch
 
-+ (BOOL)catchException:(void(^)(void))tryBlock error:(__autoreleasing NSError **)error {
+/**
+ Provides try catch functionality for swift by wrapping around Objective-C
+ */
++ (void)try:(__attribute__((noescape))  void(^ _Nullable)(void))try catch:(__attribute__((noescape)) void(^ _Nullable)(NSException*exception))catch finally:(__attribute__((noescape)) void(^ _Nullable)(void))finally
+{
   @try {
-    tryBlock();
-    return YES;
+    if (try != NULL) try();
   }
   @catch (NSException *exception) {
-    *error = [[NSError alloc] initWithDomain:exception.name code:0 userInfo:exception.userInfo];
+    if (catch != NULL) catch(exception);
   }
+  @finally {
+    if (finally != NULL) finally();
+  }
+}
+
++ (void)throwString:(NSString*)s
+{
+  @throw [NSException exceptionWithName:s reason:s userInfo:nil];
+}
+
++ (void)throwException:(NSException*)e
+{
+  @throw e;
 }
 
 @end

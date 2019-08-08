@@ -12,7 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ObjectiveCTryCatch : NSObject
 
-+ (BOOL)catchException:(void(^)(void))tryBlock error:(__autoreleasing NSError **)error;
+/**
+ Provides try catch functionality for swift by wrapping around Objective-C
+ */
+
++ (void)try:(__attribute__((noescape))  void(^ _Nullable)(void))try catch:(__attribute__((noescape)) void(^ _Nullable)(NSException*exception))catch finally:(__attribute__((noescape)) void(^ _Nullable)(void))finally;
++ (void)throwString:(NSString*)s;
++ (void)throwException:(NSException*)e;
 @end
 
 NS_ASSUME_NONNULL_END
